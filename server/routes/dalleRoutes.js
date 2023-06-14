@@ -5,7 +5,7 @@ import Post from "../mongodb/models/post.js";
 
 dotenv.config();
 
-const router = express.Router();
+const dalleRoutes = express.Router();
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -13,11 +13,11 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-router.route('/').get((req, res) => {
+dalleRoutes.route('/').get((req, res) => {
     res.send("Hello from Dalle");
 });
 
-router.route('/').post(async (req, res) => {
+dalleRoutes.route('/').post(async (req, res) => {
     try {
         const { prompt } = req.body;
         const aiResponse = await openai.createImage({
@@ -35,4 +35,4 @@ router.route('/').post(async (req, res) => {
     }
 })
 
-export default router;
+export default dalleRoutes;

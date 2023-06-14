@@ -10,13 +10,33 @@ const CreatePost = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
   
-  const handleSurpriseMe = (e) => {
+  const handleSurpriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);
     setForm({ ...form, prompt: randomPrompt });
   }
   
-  const handleSubmit = () => {
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (form.prompt && form.photo) {
+      setLoading(true);
+      try {
+          const response = await fetch('http://localhost:8080/api/v1/post', {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form)        
+          });
+          await response.json();
+          navigate('/');
+      } catch(error) {
+        alert(error);
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      alert("Please enter a prompt and generate an image")
+    }
   }
   
   const generateImage = async () => {
