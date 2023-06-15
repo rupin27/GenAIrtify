@@ -76,13 +76,13 @@ const CreatePost = () => {
       <div>
         <div>
           <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-          <p className="mt-2 text-[#666e75] text-[16px] max-w-[500px]">
+          <p className="mt-3 text-[#27272a] text-[16px] max-w-[500px]">
             Create imaginative and visually stunning images generated through DALL-E AI and share them with the community
           </p>
         </div>
       </div>
-      <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
-        <div className='flex flex-col gap-5'>
+      <form className='mt-12 max-w-3xl' onSubmit={handleSubmit}>
+        <div className='flex flex-col gap-4'>
           <FormField 
             labelName='Your Name' 
             type='text' 
@@ -101,7 +101,7 @@ const CreatePost = () => {
             isSurpriseMe 
             handleSurpriseMe={handleSurpriseMe}
           />
-          <div className='relative bg-grey-50 border border-grey-300 text-grey-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
+          <div className='mt-2 relative bg-grey-50 border border-slate-600 text-grey-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
             {form.photo ? (
               <img src={form.photo} alt={form.prompt} className='w-full h-full object-contain'/>
             ) : (
@@ -115,19 +115,29 @@ const CreatePost = () => {
           </div>
         </div>
         <div className="mt-5 flex gap-5">
-          <button type="button" onClick={generateImage} className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-            {generatingImg ? 'Generating...' : 'Generate'}
-          </button>
+          <a href="#_" onClick={generateImage} class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group bg-[#6469ff]">
+            <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+            <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+            <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">{generatingImg ? 'Generating...' : 'Generate'}</span>
+            <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+          </a>
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
-          <button type="submit" className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-            {loading ? 'Sharing...' : 'Share with the Community'}
-          </button>
+          <p className="mt-3 text-[#27272a] text-[16px] max-w-[800px]"> Once you have created the image you want, you can share it with others in the community</p>
+          <a href="#_" onClick={handleSubmit} type="submit" class="mt-3 relative inline-flex items-center justify-start overflow-hidden inline-block px-5 py-3 font-bold rounded-full group bg-[#6469ff]">
+            <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+            <span class="absolute top-0 -left-8 w-64 h-64 -mt-1 transition-all duration-500 ease-in-out rotate-42 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-1"></span>
+            <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-black">
+             {loading ? 'Sharing...' : 'Share with Community'}
+            </span>
+           <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+          </a>
         </div>
-
       </form>
+      <div className='mt-5 flex flex-col'>
+        <p className="mt-3 font-bold text-[#27272a] text-b text-[14px] ">GenAitrify<span>&trade;</span>, under the proprietorship of Mr. Rupin Mehra, prioritizes the establishment of a secure and enjoyable community environment for all users. We are committed to ensuring the safety and amusement of each individual who utilizes our platform. </p>
+      </div>
     </section>
   )
 }
