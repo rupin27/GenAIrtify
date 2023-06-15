@@ -1,13 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { logo, genAirtify} from "./assets";
-
 import { Home, CreatePost } from './pages';
 
 const App = () => {
   return (
     <BrowserRouter>
-    <header className='w-full flex justify-between items-center sm:px-8 px-4 py-4 border-b border-b-[#4b5563] bg-gradient-to-r from-indigo-500'>
+    <header className='w-full flex justify-between items-center sm:px-8 px-4 py-4 border-b border-b-[#4b5563] bg-gradient-to-r from-indigo-400'>
       <div className='flex items-center gap-3'>
         <Link to="/">
           <img src={genAirtify} alt="logo" className="mt-1 w-29 object-contain" />
@@ -30,7 +29,7 @@ const App = () => {
       </div>
     </header>
 
-    <main className="w-full bg-gradient-to-r from-indigo-500 min-h-[calc(100vh-73px)] mx-auto">
+    <main className="w-full min-h-[calc(100vh-73px)]">
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/create-post" element={<CreatePost />}/>

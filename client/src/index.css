@@ -5,7 +5,11 @@
 * {
     font-family: 'Inter', sans-serif;
 }
-
+body {
+    background-image: linear-gradient(to right, #6366f1, #eef2ff);
+    /* background-color: grey; */
+}
+  
 @media screen and (min-width: 480px) {
     .card:nth-child(7n + 1) {
         grid-column: auto/span 2;
