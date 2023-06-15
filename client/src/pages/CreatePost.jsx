@@ -35,7 +35,7 @@ const CreatePost = () => {
         setLoading(false);
       }
     } else {
-      alert("Please enter a prompt and generate an image")
+      alert("Kindly provide a prompt and initiate the image generation process")
     }
   }
   
@@ -62,7 +62,7 @@ const CreatePost = () => {
         setGeneratingImg(false);
       }
     } else {
-      alert('Please provide proper prompt');
+      alert('Kindly furnish an appropriate prompt, if you may');
     }
   };
 
@@ -76,9 +76,9 @@ const CreatePost = () => {
     <section className='sm:p-8 px-4 py-8 max-w-7xl'>
       <div>
         <div>
-          <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
+          <h1 className="font-extrabold text-[#222328] text-[32px]">Visualize your Imaginative Mind</h1>
           <p className="mt-3 text-[#27272a] text-[18px] max-w-[500px]">
-            Create imaginative and visually stunning images generated through DALL-E AI and share them with the community
+            Create imaginative and visually stunning images generated through DALL-E AI and share them amongst the GenAIrtify community.
           </p>
         </div>
       </div>
@@ -139,8 +139,8 @@ const CreatePost = () => {
     </section>
     <hr className= 'mt-10 w-screen px-10' style={{ background: "#4b5563", height: "1px", border: "none",}} />
     <section className='sm:p-2 px-4 max-w-7xl'>
-      <div className='mt-5 relative flex'>
-        <p className="mt-3 font-bold text-[#27272a] text-b text-[12px] ">GenAitrify<span>&trade;</span>, under the proprietorship of Mr. Rupin Mehra, prioritizes the establishment of a secure and enjoyable community environment for all users. We are committed to ensuring the safety and amusement of each individual who utilizes our platform. </p>
+      <div className='relative flex'>
+        <p className="mt-2 font-bold text-[#27272a] text-b text-[12px] ">GenAitrify<span>&trade;</span>, under the proprietorship of Mr. Rupin Mehra, prioritizes the establishment of a secure and enjoyable community environment for all users. We are committed to ensuring the safety and amusement of each individual who utilizes our platform. </p>
       </div>
     </section>
   </>
