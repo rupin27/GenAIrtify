@@ -72,7 +72,8 @@ const CreatePost = () => {
   const [loading, setLoading] = useState(false);
   
   return (
-    <section className='max-w-7xl mx-auto'>
+    <>
+    <section className='sm:p-8 px-4 py-8 max-w-7xl'>
       <div>
         <div>
           <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
@@ -135,10 +136,14 @@ const CreatePost = () => {
           </a>
         </div>
       </form>
-      <div className='mt-5 flex flex-col'>
-        <p className="mt-3 font-bold text-[#27272a] text-b text-[14px] ">GenAitrify<span>&trade;</span>, under the proprietorship of Mr. Rupin Mehra, prioritizes the establishment of a secure and enjoyable community environment for all users. We are committed to ensuring the safety and amusement of each individual who utilizes our platform. </p>
+    </section>
+    <hr className= 'mt-10 w-screen px-10' style={{ background: "#4b5563", height: "1px", border: "none",}} />
+    <section className='sm:p-2 px-4 max-w-7xl'>
+      <div className='mt-5 relative flex'>
+        <p className="mt-3 font-bold text-[#27272a] text-b text-[12px] ">GenAitrify<span>&trade;</span>, under the proprietorship of Mr. Rupin Mehra, prioritizes the establishment of a secure and enjoyable community environment for all users. We are committed to ensuring the safety and amusement of each individual who utilizes our platform. </p>
       </div>
     </section>
+  </>
   )
 }
 

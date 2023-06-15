@@ -55,7 +55,7 @@ const Home = () => {
   };
 
   return (
-    <section className="max-w-7xl ">
+    <section className=" sm:p-8 px-4 py-8 max-w-7xl ">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
         <p className="mt-2 text-[#27272a] text-[16px] max-w-[500px]">
