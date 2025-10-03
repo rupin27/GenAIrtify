@@ -1,5 +1,6 @@
 <h1>GenAIrtify 🎨</h1>
 <p>GenAIrtify is a MERN stack-based solution that empowers users to generate lifelike images through text inputs. OpenAI's cutting-edge DALL-E model is integrated to provide unparalleled creativity in image generation, alongside an engaging user experience. 🚀</p>
+<img width="1440" height="814" alt="GenAIrtify" src="https://github.com/user-attachments/assets/3055eb65-3e5d-4aa2-bd23-ec6b97f0e763" />
 
 <h2>Technologies Used 🛠️</h2>
 <ul>
